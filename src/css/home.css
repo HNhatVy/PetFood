@@ -1,0 +1,1160 @@
+/* =========================================================
+   RESET
+   ========================================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    color: #3d3028;
+
+
+    background-image: url("../images/login-bg.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    background-attachment: fixed;
+}
+
+/* =========================================================
+   HEADER
+   ========================================================= */
+
+.header {
+    width: 100%;
+
+    background: #ffffff;
+
+    border-bottom: 1px solid #eee6df;
+
+    position: relative;
+    z-index: 100;
+}
+
+
+.header-container {
+    max-width: 1480px;
+    height: 82px;
+
+    margin: 0 auto;
+
+    padding: 0 30px;
+
+    display: flex;
+    align-items: center;
+
+    gap: 22px;
+}
+
+/* =========================================================
+   LOGO
+   ========================================================= */
+
+.logo {
+    display: flex;
+    align-items: center;
+
+    gap: 9px;
+
+    text-decoration: none;
+
+    flex-shrink: 0;
+}
+
+
+.logo-icon {
+    font-size: 30px;
+
+    color: #2f211b;
+
+    display: flex;
+    align-items: center;
+}
+
+
+.logo-text {
+    color: #f58220;
+
+    font-size: 30px;
+
+    font-weight: 800;
+
+    letter-spacing: -0.4px;
+}
+
+
+/* =========================================================
+   NAVIGATION
+   ========================================================= */
+
+.nav-menu {
+    display: flex;
+    align-items: center;
+
+    gap: 30px;
+
+    flex: 1;
+}
+
+.nav-menu a {
+    position: relative;
+
+    color: #817872;
+
+    text-decoration: none;
+
+    font-size: 15px;
+
+    font-weight: 400;
+
+    padding: 30px 0 27px;
+}
+
+
+.nav-menu a.active {
+    color: #f47721;
+
+    font-weight: 400;
+}
+
+
+.nav-menu a.active::after {
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+    right: 0;
+
+    bottom: 17px;
+
+    height: 2px;
+
+    background: #f47721;
+
+    border-radius: 2px;
+}
+
+.nav-menu a:hover {
+    color: #f36f21;
+}
+
+
+/* =========================================================
+   SEARCH
+   ========================================================= */
+
+.search-box {
+    width: 320px;
+    height: 44px;
+
+    display: flex;
+    align-items: center;
+
+    padding: 0 16px;
+
+    background: #fffdfb;
+
+    border: 1px solid #eadfd7;
+
+    border-radius: 24px;
+
+    flex-shrink: 0;
+}
+
+
+.search-box input {
+    flex: 1;
+
+    border: none;
+    outline: none;
+
+    background: transparent;
+
+    font-size: 14px;
+
+    color: #3d3028;
+}
+
+
+.search-box input::placeholder {
+    color: #aaa29d;
+}
+
+
+.search-icon {
+    margin-right: 10px;
+
+    font-size: 17px;
+
+    color: #4b4039;
+}
+
+
+/* =========================================================
+   ACCOUNT + CART
+   ========================================================= */
+
+.header-icons {
+    display: flex;
+    align-items: center;
+
+    gap: 16px;
+
+    flex-shrink: 0;
+}
+
+
+.header-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 38px;
+    height: 38px;
+
+    text-decoration: none;
+
+    color: #302820;
+
+    transition: 0.2s ease;
+}
+
+
+.header-icon i {
+    font-size: 20px;
+
+    color: #302820;
+}
+
+
+.header-icon:hover i {
+    color: #f36f21;
+}
+
+/* =========================================================
+   HERO - DOG & CAT
+   ========================================================= */
+
+.hero {
+    width: 100%;
+    max-width: 1480px;
+
+    margin: 14px auto 28px; /* 28px = khoảng cách với hàng dưới */
+
+    padding: 0 30px;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    gap: 14px;
+}
+
+
+/* =========================================================
+   PET CARD
+   ========================================================= */
+
+.pet-card {
+    position: relative;
+
+    height: 285px;
+
+    overflow: hidden;
+
+    border-radius: 16px;
+
+    background: #fff4df;
+
+    border: 1px solid #f4e3c9;
+}
+
+
+/* =========================================================
+   DOG + CAT BACKGROUND
+   ========================================================= */
+
+.dog-card,
+.cat-card {
+    background: #fefbf4;
+}
+
+
+/* =========================================================
+   CONTENT
+   ========================================================= */
+
+.pet-card-content {
+    position: relative;
+
+    z-index: 3;
+
+    width: 56%;
+
+    padding: 32px 0 25px 38px;
+}
+
+
+/* =========================================================
+   TITLE
+   ========================================================= */
+
+.pet-title {
+    display: flex;
+    align-items: center;
+
+    gap: 14px;
+}
+
+
+.pet-title span {
+    display: block;
+
+    margin-bottom: 2px;
+
+    color: #3c2d25;
+
+    font-size: 19px;
+
+    line-height: 1.1;
+}
+
+
+.pet-title h1 {
+    margin: 0;
+
+    color: #2f211b;
+
+    font-size: 48px;
+
+    line-height: 1;
+
+    font-weight: 700;
+}
+
+
+/* =========================================================
+   PET ICON
+   ========================================================= */
+
+.pet-icon {
+    width: 54px;
+    height: 54px;
+
+    border-radius: 50%;
+
+    background: #f47721;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    flex-shrink: 0;
+}
+
+
+.pet-icon i {
+    color: #ffffff;
+
+    font-size: 26px;
+}
+
+
+/* =========================================================
+   DESCRIPTION
+   ========================================================= */
+
+.pet-card-content p {
+    margin: 18px 0;
+
+    color: #40332c;
+
+    font-size: 15px;
+
+    line-height: 1.5;
+}
+
+
+/* =========================================================
+   BUTTON
+   ========================================================= */
+
+.pet-button {
+    display: inline-flex;
+    align-items: center;
+
+    gap: 12px;
+
+    padding: 12px 24px;
+
+    background: #f47721;
+
+    border-radius: 25px;
+
+    color: #ffffff;
+
+    text-decoration: none;
+
+    font-size: 15px;
+
+    font-weight: 600;
+}
+
+
+.pet-button span {
+    font-size: 19px;
+
+    line-height: 1;
+}
+
+
+/* =========================================================
+   PET IMAGE
+   ========================================================= */
+
+.pet-image {
+    position: absolute;
+
+    z-index: 2;
+
+    object-fit: contain;
+
+    pointer-events: none;
+
+    bottom: 0;
+}
+
+
+/* CHÓ */
+
+.dog-image {
+    width: 46%;
+
+    height: 94%;
+
+    right: 2%;
+
+    object-fit: contain;
+}
+
+
+/* MÈO */
+
+.cat-image {
+    width: 46%;
+
+    height: 94%;
+
+    right: 2%;
+
+    object-fit: contain;
+}
+
+/* =========================================================
+   BENEFITS
+   ========================================================= */
+
+.benefits {
+    width: calc(100% - 70px);
+
+    margin: 0 auto;
+
+    min-height: 110px;
+
+    background: #ffffff;
+
+    border-radius: 25px;
+
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    align-items: center;
+
+    padding: 20px 35px;
+
+    position: relative;
+
+    z-index: 5;
+}
+
+
+.benefit-item {
+    display: flex;
+
+    align-items: center;
+
+    gap: 15px;
+
+    padding: 0 20px;
+
+    border-right: 1px solid #eee1d8;
+}
+
+.benefit-item:last-child {
+    border-right: none;
+}
+
+
+.benefit-icon {
+    width: 50px;
+    height: 50px;
+
+    flex-shrink: 0;
+
+    border-radius: 50%;
+
+    background: #fff0e5;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 22px;
+}
+
+
+.benefit-item h3 {
+    font-size: 16px;
+
+    margin-bottom: 6px;
+
+    color: #3d3028;
+}
+
+.benefit-item p {
+    font-size: 14px;
+
+    color: #999;
+}
+
+
+/* =========================================================
+   PRODUCT SECTION
+   ========================================================= */
+
+.product-section {
+    width: calc(100% - 80px);
+
+    max-width: 1250px;
+
+    margin: 80px auto 0;
+}
+
+
+/* SECTION HEADER */
+
+.section-header {
+    display: flex;
+
+    align-items: flex-end;
+
+    justify-content: space-between;
+
+    margin-bottom: 30px;
+}
+
+
+.section-label {
+    font-size: 12px;
+
+    font-weight: bold;
+
+    letter-spacing: 2px;
+
+    color: #ef7626;
+}
+
+
+.section-header h2 {
+    font-size: 32px;
+
+    margin-top: 7px;
+
+    color: #3d3028;
+}
+
+
+.section-header p {
+    margin-top: 8px;
+
+    color: #777;
+
+    font-size: 15px;
+}
+
+
+.view-all {
+    text-decoration: none;
+
+    color: #ef7626;
+
+    font-weight: bold;
+
+    font-size: 14px;
+}
+
+
+/* =========================================================
+   PRODUCT GRID
+   ========================================================= */
+
+.product-grid {
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 22px;
+}
+
+
+/* PRODUCT CARD */
+
+.product-card {
+    background: #ffffff;
+
+    border-radius: 18px;
+
+    overflow: hidden;
+
+    border: 1px solid #eee3db;
+
+    transition: 0.2s;
+}
+
+.product-card:hover {
+    transform: translateY(-4px);
+
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+}
+
+
+/* =========================================================
+   PRODUCT IMAGE FRAME
+   ========================================================= */
+
+.product-image {
+    width: 100%;
+
+    height: 230px;
+
+    background: #faf5f0;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    color: #aaa;
+
+    font-size: 14px;
+}
+
+
+/* PRODUCT INFO */
+
+.product-info {
+    padding: 18px;
+}
+
+.product-info h3 {
+    font-size: 17px;
+
+    margin-bottom: 10px;
+
+    color: #3d3028;
+}
+
+
+.product-price {
+    color: #ef7626;
+
+    font-weight: bold;
+
+    margin-bottom: 8px;
+}
+
+
+.product-description {
+    font-size: 14px;
+
+    line-height: 1.5;
+
+    color: #888;
+}
+
+
+/* =========================================================
+   CTA
+   ========================================================= */
+
+.cta {
+    width: calc(100% - 80px);
+
+    max-width: 1250px;
+
+    min-height: 300px;
+
+    margin: 90px auto;
+
+    border-radius: 25px;
+
+    background: rgba(239, 118, 38, 0.9);
+
+    display: flex;
+
+    align-items: center;
+
+    padding: 50px 70px;
+
+    overflow: hidden;
+}
+
+
+.cta-content {
+    max-width: 600px;
+}
+
+
+.cta-content>span {
+    font-size: 13px;
+
+    font-weight: bold;
+
+    letter-spacing: 3px;
+
+    color: white;
+}
+
+
+.cta h2 {
+    margin-top: 12px;
+
+    font-size: 38px;
+
+    line-height: 1.15;
+
+    color: white;
+}
+
+
+.cta p {
+    margin-top: 15px;
+
+    margin-bottom: 25px;
+
+    color: white;
+
+    font-size: 16px;
+}
+
+
+.cta-button {
+    display: inline-block;
+
+    padding: 13px 25px;
+
+    border-radius: 25px;
+
+    background: white;
+
+    color: #ef7626;
+
+    text-decoration: none;
+
+    font-weight: bold;
+}
+
+
+/* =========================================================
+   FOOTER
+   ========================================================= */
+
+.footer {
+    margin-top: 80px;
+
+    background: #3d3028;
+
+    color: white;
+
+    padding: 50px 40px 25px;
+}
+
+
+.footer-container {
+    max-width: 1250px;
+
+    margin: 0 auto;
+
+    display: grid;
+
+    grid-template-columns: 2fr 1fr 1fr 1fr;
+
+    gap: 50px;
+}
+
+
+.footer-column {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 10px;
+}
+
+
+.footer-column h3 {
+    font-size: 19px;
+
+    margin-bottom: 5px;
+}
+
+
+.footer-logo {
+    color: #ef7626;
+}
+
+
+.footer-column p {
+    color: #d5cbc5;
+
+    line-height: 1.6;
+
+    max-width: 330px;
+}
+
+
+.footer-column a {
+    color: #d5cbc5;
+
+    text-decoration: none;
+
+    font-size: 14px;
+}
+
+
+.footer-column a:hover {
+    color: #ef7626;
+}
+
+
+.footer-bottom {
+    max-width: 1250px;
+
+    margin: 40px auto 0;
+
+    padding-top: 20px;
+
+    border-top: 1px solid rgba(255, 255, 255, 0.15);
+
+    color: #d5cbc5;
+
+    font-size: 14px;
+}
+
+
+/* =========================================================
+   CHAT BUTTON
+   ========================================================= */
+
+.chat-button {
+    position: fixed;
+
+    right: 30px;
+    bottom: 25px;
+
+    width: 58px;
+    height: 58px;
+
+    border: none;
+
+    border-radius: 50%;
+
+    background: #ef7626;
+
+    color: white;
+
+    font-size: 22px;
+
+    cursor: pointer;
+
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
+
+    z-index: 100;
+}
+
+
+/* =========================================================
+   RESPONSIVE - TABLET
+   ========================================================= */
+
+@media (max-width: 1100px) {
+
+    .header-container {
+        gap: 20px;
+
+        padding: 0 25px;
+    }
+
+    .nav-menu {
+        gap: 13px;
+    }
+
+    .nav-menu a {
+        font-size: 15px;
+    }
+
+    .search-box {
+        width: 250px;
+    }
+
+    .hero {
+        min-height: 420px;
+    }
+
+    .pet-banner {
+        min-height: 420px;
+    }
+
+    .pet-content {
+        width: 60%;
+    }
+
+    .pet-content h1 {
+        font-size: 40px;
+    }
+
+    .pet-image {
+        width: 45%;
+    }
+
+    .benefits {
+        width: calc(100% - 40px);
+
+        padding: 20px 10px;
+    }
+
+    .benefit-item {
+        padding: 0 10px;
+    }
+
+    .product-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .footer-container {
+        grid-template-columns: 2fr 1fr 1fr;
+    }
+}
+
+
+/* =========================================================
+   RESPONSIVE - MOBILE
+   ========================================================= */
+
+@media (max-width: 768px) {
+
+    /* HEADER */
+
+    .header-container {
+        min-height: 75px;
+
+        padding: 0 18px;
+
+        gap: 15px;
+    }
+
+    .logo {
+        font-size: 24px;
+    }
+
+    .nav-menu {
+        display: none;
+    }
+
+    .search-box {
+        flex: 1;
+
+        width: auto;
+
+        height: 40px;
+    }
+
+    .header-icons {
+        gap: 8px;
+    }
+
+
+    /* HERO */
+
+    .hero {
+        flex-direction: column;
+    }
+
+    .pet-banner {
+        width: 100%;
+
+        min-height: 380px;
+
+        padding: 40px 25px;
+    }
+
+    .pet-content {
+        width: 55%;
+    }
+
+    .pet-content h1 {
+        font-size: 36px;
+    }
+
+    .pet-description {
+        font-size: 14px;
+    }
+
+    .pet-image {
+        width: 45%;
+
+        right: 5px;
+    }
+
+
+    /* BENEFITS */
+
+    .benefits {
+        width: calc(100% - 25px);
+
+        grid-template-columns: 1fr 1fr;
+
+        gap: 15px;
+
+        padding: 20px;
+    }
+
+    .benefit-item {
+        border-right: none;
+
+        padding: 10px;
+    }
+
+
+    /* PRODUCT */
+
+    .product-section {
+        width: calc(100% - 30px);
+
+        margin-top: 55px;
+    }
+
+    .section-header h2 {
+        font-size: 26px;
+    }
+
+    .product-grid {
+        grid-template-columns: 1fr 1fr;
+
+        gap: 15px;
+    }
+
+    .product-image {
+        height: 180px;
+    }
+
+
+    /* CTA */
+
+    .cta {
+        width: calc(100% - 30px);
+
+        padding: 40px 30px;
+
+        margin: 60px auto;
+    }
+
+    .cta h2 {
+        font-size: 29px;
+    }
+
+
+    /* FOOTER */
+
+    .footer {
+        padding: 40px 25px 20px;
+    }
+
+    .footer-container {
+        grid-template-columns: 1fr 1fr;
+
+        gap: 35px;
+    }
+
+}
+
+
+/* =========================================================
+   RESPONSIVE - SMALL PHONE
+   ========================================================= */
+
+@media (max-width: 480px) {
+
+    .search-box {
+        display: none;
+    }
+
+    .hero {
+        width: 100%;
+    }
+
+    .pet-banner {
+        min-height: 350px;
+    }
+
+    .pet-content {
+        width: 58%;
+    }
+
+    .pet-content h1 {
+        font-size: 31px;
+    }
+
+    .pet-image {
+        width: 45%;
+    }
+
+    .benefits {
+        grid-template-columns: 1fr;
+    }
+
+    .benefit-item {
+        border-bottom: 1px solid #eee3db;
+
+        padding-bottom: 15px;
+    }
+
+    .benefit-item:last-child {
+        border-bottom: none;
+    }
+
+    .product-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .footer-container {
+        grid-template-columns: 1fr;
+    }
+
+    .chat-button {
+        right: 18px;
+        bottom: 18px;
+    }
+}

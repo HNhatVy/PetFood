@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Pet Food Shop</title>
+
+    <link rel="stylesheet" href="css/login.css">
+</head>
+
+<body>
+
+    <!-- Close button - Continue as Guest -->
+    <button class="close-button" onclick="continueAsGuest()" title="Continue as Guest">
+        ×
+    </button>
+
+    <div class="login-container">
+
+        <div class="login-card">
+
+            <!-- Logo / Brand -->
+            <div class="brand">
+                <h1>Pet Food</h1>
+                <p>Welcome back!</p>
+            </div>
+
+            <!-- Login Form -->
+            <form>
+
+                <!-- Email / Username -->
+                <div class="form-group">
+                    <label for="email">Email or Username</label>
+
+                    <input
+                        type="text"
+                        id="email"
+                        name="email"
+                        placeholder="Enter your email or username"
+                    >
+                </div>
+
+                <!-- Password -->
+                <div class="form-group">
+                    <label for="password">Password</label>
+
+                    <div class="password-wrapper">
+
+                        <input
+                            type="password"
+                            id="password"
+                            name="password"
+                            placeholder="Enter your password"
+                        >
+
+                        <button
+                            type="button"
+                            class="show-password"
+                            onclick="togglePassword()"
+                        >
+                            Show
+                        </button>
+
+                    </div>
+                </div>
+
+                <!-- Forgot Password -->
+                <div class="forgot-password">
+                    <a href="#">Forgot password?</a>
+                </div>
+
+                <!-- Login Button -->
+                <button
+                    type="button"
+                    class="login-button"
+                    onclick="login()"
+                >
+                    LOGIN
+                </button>
+
+            </form>
+
+            <!-- OR -->
+            <div class="divider">
+                <span>OR</span>
+            </div>
+
+            <!-- Google Login -->
+            <button
+                type="button"
+                class="google-button"
+                onclick="googleLogin()"
+            >
+                <span class="google-icon">G</span>
+                Continue with Google
+            </button>
+
+            <!-- Register -->
+            <div class="register">
+                Don't have an account?
+                <a href="#">Register</a>
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <script>
+
+        // Show / Hide Password
+        function togglePassword() {
+
+            const password = document.getElementById("password");
+            const button = document.querySelector(".show-password");
+
+            if (password.type === "password") {
+
+                password.type = "text";
+                button.textContent = "Hide";
+
+            } else {
+
+                password.type = "password";
+                button.textContent = "Show";
+
+            }
+        }
+
+
+        // Login
+        function login() {
+
+            const email = document.getElementById("email").value;
+            const password = document.getElementById("password").value;
+
+            if (email === "" || password === "") {
+
+                alert("Please enter your email and password.");
+                return;
+
+            }
+
+            alert("Login function will be implemented later.");
+
+        }
+
+
+        // Google Login
+        function googleLogin() {
+
+            alert("Google Login will be implemented later.");
+
+        }
+
+
+        // Continue as Guest
+        function continueAsGuest() {
+
+            window.location.href = "home.html";
+
+        }
+
+    </script>
+
+</body>
+</html>
