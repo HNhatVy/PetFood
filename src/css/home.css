@@ -13,8 +13,8 @@ html {
 }
 
 body {
-    font-family: Arial, Helvetica, sans-serif;
-    color: #3d3028;
+    font-family: 'Inter', Arial, Helvetica, sans-serif;
+    color: #3D3028;
 
 
     background-image: url("../images/login-bg.png");
@@ -32,9 +32,9 @@ body {
 .header {
     width: 100%;
 
-    background: #ffffff;
+    background: #FFFFFF;
 
-    border-bottom: 1px solid #eee6df;
+    border-bottom: 1px solid #F4E3C9;
 
     position: relative;
     z-index: 100;
@@ -126,24 +126,6 @@ body {
     font-weight: 400;
 }
 
-
-.nav-menu a.active::after {
-    content: "";
-
-    position: absolute;
-
-    left: 0;
-    right: 0;
-
-    bottom: 17px;
-
-    height: 2px;
-
-    background: #f47721;
-
-    border-radius: 2px;
-}
-
 .nav-menu a:hover {
     color: #f36f21;
 }
@@ -162,7 +144,7 @@ body {
 
     padding: 0 16px;
 
-    background: #fffdfb;
+    background: #FFFFFF;
 
     border: 1px solid #eadfd7;
 
@@ -182,7 +164,7 @@ body {
 
     font-size: 14px;
 
-    color: #3d3028;
+    color: #3D3028;
 }
 
 
@@ -249,7 +231,8 @@ body {
     width: 100%;
     max-width: 1480px;
 
-    margin: 14px auto 28px; /* 28px = khoảng cách với hàng dưới */
+    margin: 14px auto 28px;
+    /* 28px = khoảng cách với hàng dưới */
 
     padding: 0 30px;
 
@@ -273,7 +256,7 @@ body {
 
     border-radius: 16px;
 
-    background: #fff4df;
+    background: #FFFFFF;
 
     border: 1px solid #f4e3c9;
 }
@@ -363,7 +346,7 @@ body {
 
 
 .pet-icon i {
-    color: #ffffff;
+    color: #FFFFFF;
 
     font-size: 26px;
 }
@@ -400,7 +383,7 @@ body {
 
     border-radius: 25px;
 
-    color: #ffffff;
+    color: #FFFFFF;
 
     text-decoration: none;
 
@@ -470,7 +453,7 @@ body {
 
     min-height: 110px;
 
-    background: #ffffff;
+    background: #FFFFFF;
 
     border-radius: 25px;
 
@@ -499,7 +482,7 @@ body {
 
     padding: 0 20px;
 
-    border-right: 1px solid #eee1d8;
+    border-right: 1px solid #F4E3C9;
 }
 
 .benefit-item:last-child {
@@ -515,7 +498,7 @@ body {
 
     border-radius: 50%;
 
-    background: #fff0e5;
+    background: #FFF0E6;
 
     display: flex;
     align-items: center;
@@ -530,13 +513,13 @@ body {
 
     margin-bottom: 6px;
 
-    color: #3d3028;
+    color: #3D3028;
 }
 
 .benefit-item p {
     font-size: 14px;
 
-    color: #999;
+    color: #817872;
 }
 
 
@@ -573,7 +556,7 @@ body {
 
     letter-spacing: 2px;
 
-    color: #ef7626;
+    color: #F47721;
 }
 
 
@@ -582,7 +565,7 @@ body {
 
     margin-top: 7px;
 
-    color: #3d3028;
+    color: #3D3028;
 }
 
 
@@ -598,7 +581,7 @@ body {
 .view-all {
     text-decoration: none;
 
-    color: #ef7626;
+    color: #F47721;
 
     font-weight: bold;
 
@@ -622,7 +605,7 @@ body {
 /* PRODUCT CARD */
 
 .product-card {
-    background: #ffffff;
+    background: #FFFFFF;
 
     border-radius: 18px;
 
@@ -673,12 +656,12 @@ body {
 
     margin-bottom: 10px;
 
-    color: #3d3028;
+    color: #3D3028;
 }
 
 
 .product-price {
-    color: #ef7626;
+    color: #F47721;
 
     font-weight: bold;
 
@@ -769,7 +752,7 @@ body {
 
     background: white;
 
-    color: #ef7626;
+    color: #F47721;
 
     text-decoration: none;
 
@@ -784,7 +767,7 @@ body {
 .footer {
     margin-top: 80px;
 
-    background: #3d3028;
+    background: #3D3028;
 
     color: white;
 
@@ -822,7 +805,7 @@ body {
 
 
 .footer-logo {
-    color: #ef7626;
+    color: #F47721;
 }
 
 
@@ -845,7 +828,7 @@ body {
 
 
 .footer-column a:hover {
-    color: #ef7626;
+    color: #F47721;
 }
 
 
@@ -865,296 +848,394 @@ body {
 
 
 /* =========================================================
-   CHAT BUTTON
-   ========================================================= */
+   CHAT BUTTON - MATCHING PETFOOD STYLE
+========================================================= */
 
 .chat-button {
     position: fixed;
-
     right: 30px;
     bottom: 25px;
+    width: 52px;
+    height: 52px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    border-radius: 50%;
+    background: #F47721;
+    color: #FFFFFF;
+    cursor: pointer;
+    box-shadow: 0 5px 18px rgba(61, 48, 40, 0.16);
+    z-index: 1000;
+    transition: background 0.2s ease, transform 0.2s ease;
+}
 
-    width: 58px;
-    height: 58px;
+.chat-button i {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    font-size: 21px;
+    line-height: 1;
+}
+
+.chat-button:hover {
+    background: #E96816;
+    transform: translateY(-2px);
+}
+
+/* =========================================================
+   FLASH SALE - EXPIRY DATE
+   ========================================================= */
+
+.expiry-date {
+    display: inline-flex;
+    align-items: center;
+
+    gap: 5px;
+
+    margin: 6px 0;
+
+    color: #F47721;
+
+    font-size: 11px;
+    font-weight: 600;
+}
+
+.expiry-date i {
+    font-size: 11px;
+}
+
+
+/* =========================================================
+   ADD TO CART BUTTON
+   ========================================================= */
+
+.add-cart-btn {
+    width: 100%;
+    height: 42px;
+
+    margin-top: 14px;
 
     border: none;
+    border-radius: 21px;
 
-    border-radius: 50%;
+    background: linear-gradient(135deg, #f47721, #F47721);
 
-    background: #ef7626;
+    color: #FFFFFF;
 
-    color: white;
-
-    font-size: 22px;
+    font-size: 14px;
+    font-weight: 600;
 
     cursor: pointer;
 
-    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
+    gap: 8px;
+
+    box-shadow: 0 4px 14px rgba(239, 118, 38, 0.28);
+
+    transition: 0.2s ease;
+}
+
+.add-cart-btn:hover {
+    background: linear-gradient(135deg, #F47721, #e0691d);
+
+    box-shadow: 0 6px 18px rgba(239, 118, 38, 0.38);
+
+    transform: translateY(-1px);
+}
+
+.add-cart-btn:active {
+    transform: translateY(0);
+
+    box-shadow: 0 2px 8px rgba(239, 118, 38, 0.3);
+}
+
+.add-cart-btn i {
+    font-size: 14px;
+}
+
+
+
+/* =========================================================
+   HEADER - DESKTOP / LARGE SCREEN
+   Giữ bảng màu PetFood cũ; tối ưu cho màn hình máy tính.
+   ========================================================= */
+
+.header {
+    width: 100%;
+    background: #FFFAF4;
+    border-bottom: none;
+    position: relative;
     z-index: 100;
 }
 
+.header-container {
+    width: 100%;
+    max-width: 1600px;
+    min-height: 64px;
+    height: 64px;
+    margin: 0 auto;
+    padding: 0 32px;
+    display: flex;
+    align-items: center;
+    gap: 24px;
+}
 
-/* =========================================================
-   RESPONSIVE - TABLET
-   ========================================================= */
+.logo {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    flex-shrink: 0;
+    text-decoration: none;
+}
 
-@media (max-width: 1100px) {
+.logo-icon {
+    color: #F47721;
+    font-size: 25px;
+}
 
-    .header-container {
-        gap: 20px;
+.logo-text {
+    color: #3D3028;
+    font-size: 21px;
+    font-weight: 700;
+}
 
-        padding: 0 25px;
-    }
+.nav-menu {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex: 1;
+    min-width: 0;
+    white-space: nowrap;
+}
 
-    .nav-menu {
-        gap: 13px;
-    }
+.nav-menu a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 8px 16px;
+    border-radius: 22px;
+    color: #817872;
+    font-size: 13px;
+    font-weight: 400;
+    white-space: nowrap;
+    text-decoration: none;
+    transition: background 0.2s ease, color 0.2s ease;
+}
 
-    .nav-menu a {
-        font-size: 15px;
-    }
+.nav-menu a:hover {
+    background: #FFF4DF;
+    color: #E96816;
+}
 
-    .search-box {
-        width: 250px;
-    }
+.nav-menu a.active {
+    background: #F47721;
+    color: #FFFFFF;
+    font-weight: 400;
+}
 
-    .hero {
-        min-height: 420px;
-    }
+.search-box {
+    width: 250px;
+    height: 36px;
+    min-width: 190px;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 0 12px;
+    border: 1px solid #F4E3C9;
+    border-radius: 22px;
+    background: #FFF4DF;
+}
 
-    .pet-banner {
-        min-height: 420px;
-    }
+.search-icon {
+    color: #3D3028;
+    font-size: 13px;
+    flex-shrink: 0;
+}
 
-    .pet-content {
-        width: 60%;
-    }
+.search-box input {
+    width: 100%;
+    min-width: 0;
+    border: none;
+    outline: none;
+    background: transparent;
+    color: #3D3028;
+    font-family: inherit;
+    font-size: 11px;
+}
 
-    .pet-content h1 {
-        font-size: 40px;
-    }
+.search-box input::placeholder {
+    color: #817872;
+}
 
-    .pet-image {
-        width: 45%;
-    }
+.header-cart {
+    width: 36px;
+    height: 36px;
+    flex-shrink: 0;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #F4E3C9;
+    border-radius: 50%;
+    background: #FFFFFF;
+    color: #3D3028;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
 
-    .benefits {
-        width: calc(100% - 40px);
+.header-cart > i {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    font-size: 16px;
+    line-height: 1;
+}
 
-        padding: 20px 10px;
-    }
+.header-cart:hover {
+    color: #F47721;
+}
 
-    .benefit-item {
-        padding: 0 10px;
-    }
+.cart-count {
+    position: absolute;
+    top: -5px;
+    right: -4px;
+    min-width: 17px;
+    height: 17px;
+    padding: 0 4px;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: #E96816;
+    color: #FFFFFF;
+    font-size: 10px;
+    font-weight: 600;
+}
 
-    .product-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
+.header-user {
+    width: 36px;
+    height: 36px;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: #3D3028;
+    color: #FFFFFF;
+    text-decoration: none;
+    transition: background 0.2s ease;
+}
 
-    .footer-container {
-        grid-template-columns: 2fr 1fr 1fr;
-    }
+.header-user i {
+    font-size: 16px;
+}
+
+.header-user:hover {
+    background: #E96816;
+}
+
+/* Nút thêm giỏ */
+.add-cart-btn {
+    width: 100%;
+    min-height: 40px;
+    margin-top: 12px;
+    padding: 0 14px;
+    border: none;
+    border-radius: 22px;
+    background: #F47721;
+    color: #FFFFFF;
+    font-family: inherit;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 7px;
+    box-shadow: none;
+    transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.add-cart-btn:hover {
+    background: #E96816;
+    transform: translateY(-1px);
+    box-shadow: none;
+}
+
+.add-cart-btn:active {
+    transform: translateY(0);
+}
+
+.add-cart-btn i {
+    font-size: 14px;
 }
 
 
 /* =========================================================
-   RESPONSIVE - MOBILE
-   ========================================================= */
+   BENEFITS - UNIFIED COMPONENT STYLE
+========================================================= */
 
-@media (max-width: 768px) {
-
-    /* HEADER */
-
-    .header-container {
-        min-height: 75px;
-
-        padding: 0 18px;
-
-        gap: 15px;
-    }
-
-    .logo {
-        font-size: 24px;
-    }
-
-    .nav-menu {
-        display: none;
-    }
-
-    .search-box {
-        flex: 1;
-
-        width: auto;
-
-        height: 40px;
-    }
-
-    .header-icons {
-        gap: 8px;
-    }
-
-
-    /* HERO */
-
-    .hero {
-        flex-direction: column;
-    }
-
-    .pet-banner {
-        width: 100%;
-
-        min-height: 380px;
-
-        padding: 40px 25px;
-    }
-
-    .pet-content {
-        width: 55%;
-    }
-
-    .pet-content h1 {
-        font-size: 36px;
-    }
-
-    .pet-description {
-        font-size: 14px;
-    }
-
-    .pet-image {
-        width: 45%;
-
-        right: 5px;
-    }
-
-
-    /* BENEFITS */
-
-    .benefits {
-        width: calc(100% - 25px);
-
-        grid-template-columns: 1fr 1fr;
-
-        gap: 15px;
-
-        padding: 20px;
-    }
-
-    .benefit-item {
-        border-right: none;
-
-        padding: 10px;
-    }
-
-
-    /* PRODUCT */
-
-    .product-section {
-        width: calc(100% - 30px);
-
-        margin-top: 55px;
-    }
-
-    .section-header h2 {
-        font-size: 26px;
-    }
-
-    .product-grid {
-        grid-template-columns: 1fr 1fr;
-
-        gap: 15px;
-    }
-
-    .product-image {
-        height: 180px;
-    }
-
-
-    /* CTA */
-
-    .cta {
-        width: calc(100% - 30px);
-
-        padding: 40px 30px;
-
-        margin: 60px auto;
-    }
-
-    .cta h2 {
-        font-size: 29px;
-    }
-
-
-    /* FOOTER */
-
-    .footer {
-        padding: 40px 25px 20px;
-    }
-
-    .footer-container {
-        grid-template-columns: 1fr 1fr;
-
-        gap: 35px;
-    }
-
+.benefits {
+    width: calc(100% - 70px);
+    max-width: 1600px;
+    margin: 24px auto 45px;
+    padding: 24px 32px;
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    align-items: center;
+    gap: 0;
+    background: #FFFFFF;
+    border: 1px solid #F4E3C9;
+    border-radius: 24px;
+    box-shadow: 0 8px 24px rgba(61, 48, 40, 0.06);
 }
 
+.benefit-item {
+    min-width: 0;
+    min-height: 72px;
+    padding: 0 22px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
 
-/* =========================================================
-   RESPONSIVE - SMALL PHONE
-   ========================================================= */
+.benefit-item + .benefit-item {
+    border-left: 1px solid #F4E3C9;
+}
 
-@media (max-width: 480px) {
+.benefit-icon {
+    width: 50px;
+    height: 50px;
+    flex: 0 0 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: #FFF0E6;
+    color: #F47721;
+    font-size: 20px;
+}
 
-    .search-box {
-        display: none;
-    }
+.benefit-item h3 {
+    margin: 0 0 6px;
+    color: #3D3028;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 1.4;
+}
 
-    .hero {
-        width: 100%;
-    }
-
-    .pet-banner {
-        min-height: 350px;
-    }
-
-    .pet-content {
-        width: 58%;
-    }
-
-    .pet-content h1 {
-        font-size: 31px;
-    }
-
-    .pet-image {
-        width: 45%;
-    }
-
-    .benefits {
-        grid-template-columns: 1fr;
-    }
-
-    .benefit-item {
-        border-bottom: 1px solid #eee3db;
-
-        padding-bottom: 15px;
-    }
-
-    .benefit-item:last-child {
-        border-bottom: none;
-    }
-
-    .product-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .footer-container {
-        grid-template-columns: 1fr;
-    }
-
-    .chat-button {
-        right: 18px;
-        bottom: 18px;
-    }
+.benefit-item p {
+    margin: 0;
+    color: #817872;
+    font-size: 14px;
+    line-height: 1.5;
 }
