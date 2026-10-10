@@ -328,27 +328,27 @@ body {
 /* =========================================================
    PET ICON
    ========================================================= */
-
 .pet-icon {
-    width: 54px;
-    height: 54px;
-
-    border-radius: 50%;
-
-    background: #f47721;
+    width: 44px;
+    height: 44px;
+    flex-shrink: 0;
 
     display: flex;
     align-items: center;
     justify-content: center;
 
-    flex-shrink: 0;
+    border-radius: 50%;
+    background: #FFF0E6;
+    color: #F47721;
+    padding: 0;
+    line-height: 1;
 }
 
-
 .pet-icon i {
-    color: #FFFFFF;
-
-    font-size: 26px;
+    display: block;
+    font-size: 20px;
+    line-height: 1;
+    margin: 0;
 }
 
 
@@ -446,40 +446,31 @@ body {
    BENEFITS
    ========================================================= */
 
+
 .benefits {
     width: calc(100% - 70px);
-
     margin: 0 auto;
-
     min-height: 110px;
 
     background: #FFFFFF;
-
     border-radius: 25px;
-
     box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
 
     display: grid;
-
-    grid-template-columns: repeat(4, 1fr);
-
+    grid-template-columns: repeat(4, minmax(0, 1fr));
     align-items: center;
 
     padding: 20px 35px;
-
     position: relative;
-
     z-index: 5;
+    box-sizing: border-box;
 }
 
-
 .benefit-item {
+    min-width: 0;
     display: flex;
-
     align-items: center;
-
     gap: 15px;
-
     padding: 0 20px;
 
     border-right: 1px solid #F4E3C9;
@@ -489,38 +480,54 @@ body {
     border-right: none;
 }
 
-
+/* Hình tròn chứa icon */
 .benefit-icon {
     width: 50px;
     height: 50px;
-
-    flex-shrink: 0;
+    flex: 0 0 50px;
 
     border-radius: 50%;
-
     background: #FFF0E6;
 
     display: flex;
     align-items: center;
     justify-content: center;
 
+    padding: 0;
+    box-sizing: border-box;
+    line-height: 1;
+}
+
+/* Căn icon chính giữa hình tròn */
+.benefit-icon i {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 100%;
+    height: 100%;
+
+    margin: 0;
+    padding: 0;
     font-size: 22px;
+    line-height: 1;
 }
 
-
+/* Tiêu đề */
 .benefit-item h3 {
-    font-size: 16px;
-
-    margin-bottom: 6px;
-
+    margin: 0 0 6px;
     color: #3D3028;
+    font-size: 16px;
+    font-weight: 700;
 }
 
+/* Mô tả */
 .benefit-item p {
-    font-size: 14px;
-
+    margin: 0;
     color: #817872;
+    font-size: 14px;
 }
+
 
 
 /* =========================================================
@@ -594,33 +601,177 @@ body {
    ========================================================= */
 
 .product-grid {
+    width: 100%;
     display: grid;
-
-    grid-template-columns: repeat(4, 1fr);
-
-    gap: 22px;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    align-items: stretch;
+    gap: 18px;
 }
 
 
 /* PRODUCT CARD */
-
 .product-card {
+    width: 100%;
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
     background: #FFFFFF;
-
     border-radius: 18px;
-
     overflow: hidden;
-
-    border: 1px solid #eee3db;
-
-    transition: 0.2s;
+    border: 1px solid #F4E3C9;
+    box-shadow: 0 4px 14px rgba(61, 48, 40, 0.05);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
+
 
 .product-card:hover {
-    transform: translateY(-4px);
-
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(61, 48, 40, 0.09);
 }
+
+/* Khu vực hình sản phẩm */
+.product-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(61, 48, 40, 0.09);
+}
+
+/* PRODUCT IMAGE FRAME */
+.product-image {
+    width: 100%;
+    height: 180px;
+    flex: 0 0 180px;
+    background: #F8F3EE;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    color: #AAA29D;
+    font-size: 15px;
+}
+
+.product-image img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    padding: 12px;
+    box-sizing: border-box;
+    object-fit: contain;
+}
+
+/* Thông tin sản phẩm */
+.product-info {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 8px;
+    padding: 16px;
+}
+
+.product-info h3 {
+    margin: 0;
+    color: #3D3028;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 1.4;
+}
+
+.product-description {
+    display: none;
+}
+
+.product-price {
+    margin: 0;
+    color: #F47721;
+    font-size: 19px;
+    font-weight: 700;
+    line-height: 1.3;
+}
+
+/* Product expiry label */
+.expiry-date {
+    display: inline-flex;
+    align-items: center;
+    align-self: flex-start;
+    gap: 5px;
+    margin: 0;
+    padding: 4px 7px;
+    border-radius: 6px;
+    background: #FFF0E6;
+    color: #E96816;
+    font-size: 11px;
+    font-weight: 500;
+    line-height: 1.4;
+}
+
+.expiry-date i {
+    font-size: 11px;
+}
+
+/* Hạn sử dụng */
+.product-expiry {
+    display: inline-flex;
+    align-items: center;
+    align-self: flex-start;
+    gap: 6px;
+
+    padding: 5px 8px;
+    border-radius: 6px;
+
+    background: #FFF0E6;
+    color: #E96816;
+    font-size: 12px;
+    line-height: 1.4;
+}
+
+.product-expiry i {
+    font-size: 12px;
+}
+
+/* Giá */
+.product-price {
+    margin: 0;
+    color: #F47721;
+    font-size: 21px;
+    font-weight: 700;
+    line-height: 1.3;
+}
+
+/* Nút thêm giỏ hàng */
+.add-to-cart-btn {
+    width: 100%;
+    min-height: 44px;
+    margin-top: 2px;
+    padding: 10px 14px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+
+    border: none;
+    border-radius: 24px;
+    background: #F47721;
+    color: #FFFFFF;
+
+    font-family: inherit;
+    font-size: 15px;
+    font-weight: 600;
+
+    cursor: pointer;
+    transition: background 0.2s ease;
+    box-sizing: border-box;
+}
+
+.add-to-cart-btn:hover {
+    background: #E96816;
+}
+
+.add-to-cart-btn i {
+    font-size: 16px;
+    line-height: 1;
+}
+
 
 
 /* =========================================================
@@ -908,62 +1059,10 @@ body {
 }
 
 
-/* =========================================================
-   ADD TO CART BUTTON
-   ========================================================= */
-
-.add-cart-btn {
-    width: 100%;
-    height: 42px;
-
-    margin-top: 14px;
-
-    border: none;
-    border-radius: 21px;
-
-    background: linear-gradient(135deg, #f47721, #F47721);
-
-    color: #FFFFFF;
-
-    font-size: 14px;
-    font-weight: 600;
-
-    cursor: pointer;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    gap: 8px;
-
-    box-shadow: 0 4px 14px rgba(239, 118, 38, 0.28);
-
-    transition: 0.2s ease;
-}
-
-.add-cart-btn:hover {
-    background: linear-gradient(135deg, #F47721, #e0691d);
-
-    box-shadow: 0 6px 18px rgba(239, 118, 38, 0.38);
-
-    transform: translateY(-1px);
-}
-
-.add-cart-btn:active {
-    transform: translateY(0);
-
-    box-shadow: 0 2px 8px rgba(239, 118, 38, 0.3);
-}
-
-.add-cart-btn i {
-    font-size: 14px;
-}
-
-
 
 /* =========================================================
    HEADER - DESKTOP / LARGE SCREEN
-   Giữ bảng màu PetFood cũ; tối ưu cho màn hình máy tính.
+    tối ưu cho màn hình máy tính.
    ========================================================= */
 
 .header {
